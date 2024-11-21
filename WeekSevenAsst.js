@@ -9,11 +9,13 @@ console.log("Ages:", ages);
 let result = ages[ages.length - 1] - ages [0];
 console.log("The last age minus the first age is: " + result);
 
-//Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths). I ADDED THIS TO THE INITIAL AGES ARRAY
+//Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths). 
+console.log('I added a new age — 66 — to the array on line 4');
 
 //Use a loop to iterate through the array and calculate the average age.
 for (let i = 0; i < ages.length; i++) {
-    sum += ages [i];
+    sum += ages[i];
+    // DEBUG: this showed where the 299 number came from --->> console.log(sum);
 }
 let average = sum / ages.length;
 console.log("Average age:", average);
@@ -35,25 +37,28 @@ console.log(concatenatedNames);
 
 //How do you access the last element of any array?
 /* let ages = [3, 9, 23, 64, 2, 8, 28, 66, 93];
-let lastNum = ages.findLast((element) => element > 12);
-console.log(lastNum); */
+let lastNum = ages.findLast((element) => element > 12);*/
+console.log('How do you access the last element of any array? By using variable.findLast');
 
-//How do you access the first element of any array? BY USING AN INDEX NUMBER OF 0
+//How do you access the last element of any array?
+console.log('How do you access the first element of any array? By using an index number of 0');
+
+// console.log('line 43', sum); // DEBUG: This log was to figure out where the sum of name lengths — 299 — was coming from. It was using the ages variable from line 4 
 
 //Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 //For example:
 //let names = ["Kelly", "Sam", "Kate"];    // starting with this array
 //let nameLengths = [5, 3, 4];             // create a new array
 let nameLengths = [3,5,3,5,4,3,8]; 
-console.log('Length of names: ' + nameLengths);
+console.log('Length of names: ' , nameLengths);
+let sum2 = 0 //DEBUG: Changed from "sum" to "sum2" to differentiate from the original declaration. Was this an instance of DRY?
 
 //Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
-
-for (let i = 0; i < nameLengths; i++) {
-    sum += nameLengths;
+for (let i = 0; i < nameLengths.length; i++) {
+    sum2 += nameLengths[i];
+    //console.log(i,'this is the sum thing', sum2);  // DEBUG: This helped to see what this instance of sum was doing.
 }
-//I DON"T KNOW WHY THIS IS NOT RETURNING THE PROPER SUM
-
+console.log("The total sum of lengths is: ", + sum2); 
 
 
 //Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
